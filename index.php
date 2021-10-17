@@ -15,7 +15,7 @@ $chat_id = $telegram->ChatID(); // آیدی مکانی که چت صورت میگ
 $from_chat = "@test2zbot";
 // $from_id = 1;
 $m_id = $message_id; //شماره پیام
-$post = array("from_chat_id" => $chat_id,"chat_id" => $chat_id,"message_id" => $m_id);
+$post = array("from_chat_id" => $chat_id,"chat_id" => 271148667,"message_id" => $m_id);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"https://api.telegram.org/bot2080800621:AAFAUZVP1dfrVcINLxckRSZ4CrVKbyNeoTU/forwardMessage");
 curl_setopt($ch, CURLOPT_POST, 1);
