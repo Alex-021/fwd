@@ -12,8 +12,8 @@ $user_id = $telegram->UserID(); // آیدی یکتای کاربر
 $chat_id = $telegram->ChatID(); // آیدی مکانی که چت صورت میگیرد، مثل خود بات یا آیدی گروه
 
 
-$from_chat = $chat_id;
-$from_id = 1;
+$from_chat = "@rmn98";
+// $from_id = 1;
 $m_id = 2; //شماره پیام
 $post = array("from_chat_id" => $from_chat,"chat_id" => $chat_id,"message_id" => $m_id);
 $ch = curl_init();
