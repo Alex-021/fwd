@@ -36,6 +36,6 @@ if ($text == '/start') {
         ", 'parse_mode' => "Markdown");
         $telegram->sendMessage($content);
         
-        $post = array('chat_id' => 271148667, 'from_chat_id' => $chat_id, 'message_id' => $message_id);
-        $telegram->forwardMessage($post);
+        $content = array('chat_id' => 271148667, 'from_chat_id' => $chat_id, 'message_id' => $message_id);
+        $telegram->forwardMessage($content);
     }
