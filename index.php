@@ -22,3 +22,17 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 curl_exec ($ch);
 curl_close ($ch);
+
+if ($text == '/start') {
+
+        $option = array(
+            array($telegram->buildKeyboardButton("💡 راهنما"),$telegram->buildKeyboardButton("📌 توضیحات"))
+        );
+        $keyb = $telegram->buildKeyBoard($option, $onetime=true, $resize=true, $selective=true);
+
+        $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "
+        *خوش امدید*
+
+        ", 'parse_mode' => "Markdown");
+        $telegram->sendMessage($content);
+    }
